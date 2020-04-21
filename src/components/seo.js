@@ -2,8 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Helmet } from 'react-helmet';
 import { useStaticQuery, graphql } from 'gatsby';
+import fallbackCard from '../images/twitter_card.png';
 
-function SEO({ description, lang, meta, title }) {
+function SEO({ description, lang, meta, title, image }) {
 	const { site } = useStaticQuery(
 		graphql`
 			query {
@@ -19,6 +20,7 @@ function SEO({ description, lang, meta, title }) {
 	);
 
 	const metaDescription = description || site.siteMetadata.description;
+	const metaImage = image || fallbackCard;
 
 	return (
 		<Helmet
@@ -29,35 +31,51 @@ function SEO({ description, lang, meta, title }) {
 			titleTemplate={`%s | ${site.siteMetadata.title}`}
 			meta={[
 				{
-					name: `description`,
+					name: 'twitter:card',
+					content: 'summary_large_image',
+				},
+				{
+					name: 'twitter:creator',
+					content: '@thatmirac',
+				},
+				{
+					name: 'twitter:creator:id',
+					content: '1153786059718889472',
+				},
+				{
+					name: 'twitter:description',
 					content: metaDescription,
 				},
 				{
-					property: `og:title`,
+					name: 'twitter:title',
 					content: title,
 				},
 				{
-					property: `og:description`,
-					content: metaDescription,
+					name: 'twitter:image',
+					content: metaImage,
 				},
 				{
-					property: `og:type`,
-					content: `website`,
-				},
-				{
-					name: `twitter:card`,
-					content: `summary`,
-				},
-				{
-					name: `twitter:creator`,
-					content: site.siteMetadata.author,
-				},
-				{
-					name: `twitter:title`,
+					name: 'twitter:image:alt',
 					content: title,
 				},
 				{
-					name: `twitter:description`,
+					name: 'og:type',
+					content: 'website',
+				},
+				{
+					name: 'og:title',
+					content: title,
+				},
+				{
+					name: 'og:site_name',
+					content: site.siteMetadata.title,
+				},
+				{
+					name: 'og:image',
+					content: metaImage,
+				},
+				{
+					name: 'description',
 					content: metaDescription,
 				},
 			].concat(meta)}

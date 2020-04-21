@@ -187,7 +187,7 @@ const Wallpaper = ({ pageContext }) => {
 
 	return (
 		<>
-			<SEO title={name} />
+			<SEO title={name} image={screenshots[0].image.url} />
 			<header>
 				<div class="logo-container">
 					<Link to="/">
