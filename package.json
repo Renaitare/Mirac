@@ -9,6 +9,8 @@
     "gatsby": "^2.20.12",
     "gatsby-plugin-manifest": "^2.3.3",
     "gatsby-plugin-react-helmet": "^3.2.2",
+    "gatsby-plugin-robots-txt": "^1.5.0",
+    "gatsby-plugin-sitemap": "^2.3.5",
     "gatsby-source-filesystem": "^2.2.2",
     "gatsby-source-prismic": "^2.2.0",
     "prop-types": "^15.7.2",
@@ -20,12 +22,12 @@
     "prettier": "2.0.4"
   },
   "keywords": [
-	"gatsby", 
-	"design",
-	"wallpapers",
-	"mirac",
-	"iphone",
-	"desktop"
+    "gatsby",
+    "design",
+    "wallpapers",
+    "mirac",
+    "iphone",
+    "desktop"
   ],
   "license": "MIT",
   "scripts": {

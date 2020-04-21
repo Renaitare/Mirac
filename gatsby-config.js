@@ -5,6 +5,7 @@ module.exports = {
 		title: `mirac`,
 		description: `Home of Mirac's Dope Wallpapers`,
 		author: `Mirac & Renaitare`,
+		siteUrl: `https://thatmirac.com`,
 	},
 	plugins: [
 		`gatsby-plugin-react-helmet`,
@@ -36,6 +37,15 @@ module.exports = {
 
 			linkResolver: () => wallpaper => {
 				return `/wallpaper/${wallpaper.uid}`;
+			},
+		},
+		`gatsby-plugin-sitemap`,
+		{
+			resolve: 'gatsby-plugin-robots-txt',
+			options: {
+				host: 'https://www.thatmirac.com',
+				sitemap: 'https://www.thatmirac.com/sitemap.xml',
+				policy: [{ userAgent: '*', allow: '/' }],
 			},
 		},
 	],
