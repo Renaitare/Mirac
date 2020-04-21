@@ -12,7 +12,7 @@ let wallpaperList;
 
 const IndexPage = () => (
 	<>
-		<SEO title="Wallpapers by Mirac" />
+		<SEO title="Home" />
 		<header>
 			<div class="logo-container">
 				<Link to="/">

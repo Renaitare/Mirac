@@ -49,7 +49,7 @@ function SEO({ description, meta, title, image }) {
 				},
 				{
 					name: 'twitter:title',
-					content: title + '• Wallpapers by Mirac',
+					content: title + ' • Wallpapers by Mirac',
 				},
 				{
 					name: 'twitter:image',

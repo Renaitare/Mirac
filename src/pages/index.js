@@ -6,7 +6,7 @@ class Main extends React.Component {
 	render() {
 		return (
 			<>
-				<SEO title="Wallpapers by Mirac" />
+				<SEO title="Home" />
 				<Redirect noThrow to={`/wallpapers`} />
 			</>
 		);

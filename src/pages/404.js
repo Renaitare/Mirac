@@ -6,7 +6,7 @@ import headerLogo from '../images/header_image.png';
 
 const NotFoundPage = () => (
 	<>
-		<SEO title="404 | Wallpapers by Mirac" />
+		<SEO title="404" />
 		<header>
 			<div class="logo-container">
 				<Link to="/">
