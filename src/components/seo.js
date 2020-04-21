@@ -2,33 +2,34 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Helmet } from 'react-helmet';
 import { useStaticQuery, graphql } from 'gatsby';
-import fallbackCard from '../images/twitter_card.png';
 
-function SEO({ description, lang, meta, title, image }) {
-	const { site } = useStaticQuery(
-		graphql`
-			query {
-				site {
-					siteMetadata {
-						title
-						description
-						author
-					}
+function SEO({ description, meta, title, image }) {
+	const { site, file } = useStaticQuery(graphql`
+		{
+			site {
+				siteMetadata {
+					title
+					description
+					author
 				}
 			}
-		`
-	);
+
+			file(name: { eq: "twitter_card" }) {
+				publicURL
+			}
+		}
+	`);
 
 	const metaDescription = description || site.siteMetadata.description;
-	const metaImage = image || fallbackCard;
+	const metaImage = image || file.publicURL;
 
 	return (
 		<Helmet
 			htmlAttributes={{
-				lang,
+				lang: 'en-US',
 			}}
 			title={title}
-			titleTemplate={`%s | ${site.siteMetadata.title}`}
+			titleTemplate={`%s`}
 			meta={[
 				{
 					name: 'twitter:card',
@@ -48,7 +49,7 @@ function SEO({ description, lang, meta, title, image }) {
 				},
 				{
 					name: 'twitter:title',
-					content: title,
+					content: title + '• Wallpapers by Mirac',
 				},
 				{
 					name: 'twitter:image',
@@ -68,7 +69,7 @@ function SEO({ description, lang, meta, title, image }) {
 				},
 				{
 					name: 'og:site_name',
-					content: site.siteMetadata.title,
+					content: 'thatmirac.com',
 				},
 				{
 					name: 'og:image',

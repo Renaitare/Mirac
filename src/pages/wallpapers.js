@@ -12,7 +12,7 @@ let wallpaperList;
 
 const IndexPage = () => (
 	<>
-		<SEO title="Wallpapers" />
+		<SEO title="Wallpapers by Mirac" />
 		<header>
 			<div class="logo-container">
 				<Link to="/">
@@ -32,7 +32,8 @@ const IndexPage = () => (
 			</div>
 			<div class="footer">
 				<p>
-					© 2020 <a href="https://twitter.com/thatmirac">Mirac</a>
+					© {new Date().getFullYear()}{' '}
+					<a href="https://twitter.com/thatmirac">Mirac</a>
 				</p>
 			</div>
 		</div>
