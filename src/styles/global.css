@@ -40,3 +40,35 @@ header {
 	backdrop-filter: blur(1.5em);
 	-webkit-backdrop-filter: blur(1.5em);
 }
+
+::-webkit-scrollbar {
+	width: 10px;
+}
+
+::-webkit-scrollbar-track {
+	background: rgba(0, 0, 0, 0.1);
+}
+
+::-webkit-scrollbar-thumb {
+	background: rgb(31, 27, 27);
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: rgb(66, 60, 60);
+}
+
+::-moz-scrollbar {
+	width: 10px;
+}
+
+::-moz-scrollbar-track {
+	background: rgba(0, 0, 0, 0.1);
+}
+
+::-moz-scrollbar-thumb {
+	background: rgb(31, 27, 27);
+}
+
+::-moz-scrollbar-thumb:hover {
+	background: rgb(66, 60, 60);
+}

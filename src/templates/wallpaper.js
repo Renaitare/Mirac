@@ -200,7 +200,7 @@ const Wallpaper = ({ pageContext }) => {
 					<div class="top-image-background">
 						<img
 							src={screenshots[0].image.url}
-							alt={headerLogo + ' Header Image'}
+							alt={name + ' Header Image'}
 						/>
 					</div>
 					<div class="top-image-overlay"></div>

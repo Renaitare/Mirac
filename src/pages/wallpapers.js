@@ -73,13 +73,13 @@ export const Wallpapers = () => {
 			<img
 				style={{
 					width: '100%',
-					height: '100%',
+					height: 'auto',
 				}}
 				src={
 					node.data.preview_image.url.substring(
 						0,
 						node.data.preview_image.url.indexOf('?auto=compress')
-					) + '?format&rect=0,327,563,563&w=8192&h=8192'
+					) + '?format&rect=0,0,368,368'
 				}
 				alt={node.data.name.raw[0].text}></img>
 		</Link>
