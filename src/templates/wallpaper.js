@@ -170,8 +170,7 @@ const Wallpaper = ({ pageContext }) => {
 										data.wallpaper.document[0].data.preview_image.url.indexOf(
 											'?auto=compress'
 										)
-									) +
-									'?format&rect=0,327,563,563&w=8192&h=8192'
+									) + '?format&rect=0,0,368,368'
 								}
 								alt={
 									data.wallpaper.document[0].data.name.raw[0]
