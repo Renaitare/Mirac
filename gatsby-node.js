@@ -12,7 +12,7 @@ exports.createPages = async ({ reporter, actions, graphql }) => {
 				edges {
 					node {
 						uid
-						first_publication_date(formatString: "DD.mm.YYYY")
+						first_publication_date(formatString: "DD.MM.YYYY")
 						data {
 							name {
 								raw {
