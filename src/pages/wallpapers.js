@@ -54,7 +54,9 @@ export const Wallpapers = () => {
 								}
 							}
 							preview_image {
-								url
+								localFile {
+									publicURL
+								}
 							}
 						}
 					}
@@ -75,12 +77,7 @@ export const Wallpapers = () => {
 					width: '100%',
 					height: 'auto',
 				}}
-				src={
-					node.data.preview_image.url.substring(
-						0,
-						node.data.preview_image.url.indexOf('?auto=compress')
-					) + '?format&rect=0,0,368,368'
-				}
+				src={node.data.preview_image.localFile.publicURL}
 				alt={node.data.name.raw[0].text}></img>
 		</Link>
 	));
