@@ -6,12 +6,12 @@
   "author": "Renaitare <git@renai.me>",
   "dependencies": {
     "dotenv": "^8.2.0",
-    "gatsby": "^2.20.12",
-    "gatsby-plugin-manifest": "^2.3.3",
-    "gatsby-plugin-react-helmet": "^3.2.2",
+    "gatsby": "^2.20.35",
+    "gatsby-plugin-manifest": "^2.3.7",
+    "gatsby-plugin-react-helmet": "^3.2.5",
     "gatsby-plugin-robots-txt": "^1.5.0",
-    "gatsby-plugin-sitemap": "^2.3.5",
-    "gatsby-source-filesystem": "^2.2.2",
+    "gatsby-plugin-sitemap": "^2.4.0",
+    "gatsby-source-filesystem": "^2.2.5",
     "gatsby-source-prismic": "^2.2.0",
     "prop-types": "^15.7.2",
     "react": "^16.12.0",
@@ -41,9 +41,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+    "url": "https://github.com/Renaitare/Mirac"
   },
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/Renaitare/Mirac/issues"
   }
 }
