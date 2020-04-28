@@ -221,6 +221,7 @@ const Wallpaper = ({ pageContext }) => {
 								alt={name + 'Screenshot'}
 							/>
 						))}
+						<p></p>
 					</div>
 				</div>
 				<div class="seperator"></div>
@@ -235,7 +236,10 @@ const Wallpaper = ({ pageContext }) => {
 					</div>
 				</div>
 				<div class="seperator"></div>
-				<div class="related-section">{relatedHTML}</div>
+				<div class="related-section">
+					{relatedHTML}
+					<p></p>
+				</div>
 				<div class="seperator"></div>
 				<div class="footer">
 					<p>

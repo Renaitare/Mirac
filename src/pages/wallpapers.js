@@ -43,7 +43,7 @@ const IndexPage = () => (
 export const Wallpapers = () => {
 	const data = useStaticQuery(graphql`
 		{
-			allPrismicWallpaper(sort: { fields: first_publication_date }) {
+			allPrismicWallpaper(sort: { fields: data___publish_date }) {
 				edges {
 					node {
 						uid
@@ -79,6 +79,7 @@ export const Wallpapers = () => {
 				}}
 				src={node.data.preview_image.localFile.publicURL}
 				alt={node.data.name.raw[0].text}></img>
+			<p></p>
 		</Link>
 	));
 };

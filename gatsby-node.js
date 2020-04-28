@@ -12,7 +12,6 @@ exports.createPages = async ({ reporter, actions, graphql }) => {
 				edges {
 					node {
 						uid
-						first_publication_date(formatString: "DD.MM.YYYY")
 						data {
 							name {
 								raw {
@@ -64,6 +63,7 @@ exports.createPages = async ({ reporter, actions, graphql }) => {
 									}
 								}
 							}
+							publish_date(formatString: "DD.MM.YYYY")
 						}
 					}
 				}
@@ -80,7 +80,7 @@ exports.createPages = async ({ reporter, actions, graphql }) => {
 			path: '/wallpapers/' + node.uid,
 			component: wallpaperTemplate,
 			context: {
-				date: node.first_publication_date,
+				date: node.data.publish_date,
 				name: node.data.name.raw[0].text,
 				desktop: node.data.desktop_resolution,
 				desktopImage: node.data.desktop_image.url,
