@@ -33,7 +33,9 @@ exports.createPages = async ({ reporter, actions, graphql }) => {
 							tablet_resolution
 							screenshots {
 								image {
-									url
+									localFile {
+										publicURL
+									}
 								}
 							}
 							related_wallpapers {
@@ -41,7 +43,9 @@ exports.createPages = async ({ reporter, actions, graphql }) => {
 									document {
 										data {
 											preview_image {
-												url
+												localFile {
+													publicURL
+												}
 											}
 											name {
 												raw {
@@ -55,7 +59,9 @@ exports.createPages = async ({ reporter, actions, graphql }) => {
 							}
 							screenshots {
 								image {
-									url
+									localFile {
+										publicURL
+									}
 								}
 							}
 						}

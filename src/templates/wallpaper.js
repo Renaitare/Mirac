@@ -165,12 +165,8 @@ const Wallpaper = ({ pageContext }) => {
 							to={'wallpapers/' + data.wallpaper.document[0].uid}>
 							<img
 								src={
-									data.wallpaper.document[0].data.preview_image.url.substring(
-										0,
-										data.wallpaper.document[0].data.preview_image.url.indexOf(
-											'?auto=compress'
-										)
-									) + '?format&rect=0,0,368,368'
+									data.wallpaper.document[0].data
+										.preview_image.localFile.publicURL
 								}
 								alt={
 									data.wallpaper.document[0].data.name.raw[0]
@@ -186,7 +182,10 @@ const Wallpaper = ({ pageContext }) => {
 
 	return (
 		<>
-			<SEO title={name} image={screenshots[0].image.url} />
+			<SEO
+				title={name}
+				image={screenshots[0].image.localFile.publicURL}
+			/>
 			<header>
 				<div class="logo-container">
 					<Link to="/">
@@ -198,7 +197,7 @@ const Wallpaper = ({ pageContext }) => {
 				<div class="top-image">
 					<div class="top-image-background">
 						<img
-							src={screenshots[0].image.url}
+							src={screenshots[0].image.localFile.publicURL}
 							alt={name + ' Header Image'}
 						/>
 					</div>
@@ -218,10 +217,7 @@ const Wallpaper = ({ pageContext }) => {
 					<div class="screenshots-wrapper">
 						{screenshots.map(data => (
 							<img
-								src={data.image.url.substring(
-									0,
-									data.image.url.indexOf('?auto=compress')
-								)}
+								src={data.image.localFile.publicURL}
 								alt={name + 'Screenshot'}
 							/>
 						))}
