@@ -194,7 +194,6 @@ const Wallpaper = ({ pageContext }) => {
 					<Link to="credits">
 						<p>Credits</p>
 					</Link>
-					<p> </p>
 				</div>
 			</div>
 		</>
