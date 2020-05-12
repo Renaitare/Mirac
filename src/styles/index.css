@@ -55,7 +55,7 @@
 .footer {
 	display: flex;
 	margin-top: 1em;
-	margin-bottom: 25em;
+	/* margin-bottom: 25em; */
 }
 
 .footer a,
@@ -90,12 +90,12 @@
 	}
 
 	.footer {
-		margin-bottom: 256px;
+		/* margin-bottom: 256px; */
 	}
 
 	.footer p,
 	.footer a {
 		margin-right: 0.25em;
-		/* margin-bottom: 416px; */
+		margin-bottom: 128px;
 	}
 }
