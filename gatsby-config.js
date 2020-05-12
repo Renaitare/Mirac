@@ -40,12 +40,17 @@ module.exports = {
 			},
 		},
 		`gatsby-plugin-sitemap`,
+		`gatsby-plugin-robots-txt`,
 		{
-			resolve: 'gatsby-plugin-robots-txt',
+			resolve: `gatsby-plugin-canonical-urls`,
 			options: {
-				host: 'https://www.thatmirac.com',
-				sitemap: 'https://www.thatmirac.com/sitemap.xml',
-				policy: [{ userAgent: '*', allow: '/' }],
+				siteUrl: `https://thatmirac.com/`,
+			},
+		},
+		{
+			resolve: `gatsby-plugin-offline`,
+			options: {
+				precachePages: [`/wallpapers/`, `/credits/`, `/wallpapers/*`],
 			},
 		},
 	],

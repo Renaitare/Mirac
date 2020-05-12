@@ -30,7 +30,7 @@ const IndexPage = () => (
 			<div class="wallprev">
 				<Wallpapers />
 			</div>
-			<div class="footer">
+			<div class="footer fade">
 				<p>
 					© {new Date().getFullYear()}{' '}
 					<a href="https://twitter.com/thatmirac">Mirac</a>
@@ -76,7 +76,7 @@ export const Wallpapers = () => {
 	return wallpaperList.map(({ node }) => (
 		<Link to={'wallpapers/' + node.uid}>
 			<img
-				id="wallpaper"
+				className="fade"
 				style={{
 					width: '100%',
 					height: 'auto',

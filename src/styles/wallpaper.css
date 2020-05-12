@@ -1,18 +1,21 @@
 @font-face {
 	font-family: 'SF Display';
 	font-weight: 700;
+	font-display: swap;
 	src: url('https://sf.abarba.me/SF-UI-Display-Bold.otf');
 }
 
 @font-face {
 	font-family: 'SF Text';
 	font-weight: 400;
+	font-display: swap;
 	src: url('https://sf.abarba.me/SF-UI-Text-Regular.otf');
 }
 
 @font-face {
 	font-family: 'SF Display Semibold';
 	font-weight: 600;
+	font-display: swap;
 	src: url('https://sf.abarba.me/SF-UI-Display-Semibold.otf');
 }
 
