@@ -79,6 +79,14 @@ function SEO({ description, meta, title, image }) {
 					name: 'description',
 					content: metaDescription,
 				},
+				{
+					name: 'apple-mobile-web-app-capable',
+					content: 'yes',
+				},
+				{
+					name: 'apple-mobile-web-app-status-bar-style',
+					content: 'black-translucent',
+				},
 			].concat(meta)}
 		/>
 	);

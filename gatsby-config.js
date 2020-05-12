@@ -20,12 +20,12 @@ module.exports = {
 		{
 			resolve: `gatsby-plugin-manifest`,
 			options: {
-				name: `mirac-wallpapers`,
+				name: `Mirac Wallpapers`,
 				short_name: `wallpapers`,
 				start_url: `/`,
 				background_color: `#000000`,
 				theme_color: `#000000`,
-				display: `minimal-ui`,
+				display: `standalone`,
 				icon: `src/images/icon.png`,
 			},
 		},
@@ -48,11 +48,11 @@ module.exports = {
 				siteUrl: `https://thatmirac.com/`,
 			},
 		},
-		{
-			resolve: `gatsby-plugin-offline`,
-			options: {
-				precachePages: [`/wallpapers/`, `/credits/`, `/wallpapers/*`],
-			},
-		},
+		// {
+		// 	resolve: `gatsby-plugin-offline`,
+		// 	options: {
+		// 		precachePages: [`/wallpapers/`, `/credits/`, `/wallpapers/*`],
+		// 	},
+		// },
 	],
 };

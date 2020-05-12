@@ -110,7 +110,6 @@ const Wallpaper = ({ pageContext }) => {
 						<Link
 							to={'wallpapers/' + data.wallpaper.document[0].uid}>
 							<img
-								className="fade"
 								src={
 									data.wallpaper.document[0].data
 										.preview_image.localFile.publicURL
@@ -144,7 +143,6 @@ const Wallpaper = ({ pageContext }) => {
 				<div class="top-image">
 					<div class="top-image-background">
 						<img
-							className="fade"
 							src={screenshots[0].image.localFile.publicURL}
 							alt={name + ' Header Image'}
 						/>
@@ -164,7 +162,6 @@ const Wallpaper = ({ pageContext }) => {
 					<div class="screenshots-wrapper">
 						{screenshots.map(data => (
 							<img
-								className="fade"
 								src={data.image.localFile.publicURL}
 								alt={name + 'Screenshot'}
 							/>
@@ -189,11 +186,8 @@ const Wallpaper = ({ pageContext }) => {
 					<p></p>
 				</div>
 				<div class="seperator"></div>
-				<div class="footer fade">
-					<p>
-						© {new Date().getFullYear()}{' '}
-						<a href="https://twitter.com/thatmirac">Mirac</a>
-					</p>
+				<div class="footer">
+					<p>© {new Date().getFullYear()} </p>
 					<Link to="credits">
 						<p>Credits</p>
 					</Link>

@@ -31,10 +31,7 @@ const IndexPage = () => (
 				<Wallpapers />
 			</div>
 			<div class="footer fade">
-				<p>
-					© {new Date().getFullYear()}{' '}
-					<a href="https://twitter.com/thatmirac">Mirac</a>
-				</p>
+				<p>© {new Date().getFullYear()} </p>
 				<Link to="credits">
 					<p>Credits</p>
 				</Link>
