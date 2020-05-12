@@ -31,10 +31,11 @@ const IndexPage = () => (
 				<Wallpapers />
 			</div>
 			<div class="footer fade">
-				<p>© {new Date().getFullYear()} </p>
+				<p>© {new Date().getFullYear()} Mirac</p>
 				<Link to="credits">
 					<p>Credits</p>
 				</Link>
+				<p> </p>
 			</div>
 		</div>
 	</>

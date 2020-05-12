@@ -190,10 +190,11 @@ const Wallpaper = ({ pageContext }) => {
 				</div>
 				<div class="seperator"></div>
 				<div class="footer">
-					<p>© {new Date().getFullYear()} </p>
+					<p>© {new Date().getFullYear()} Mirac</p>
 					<Link to="credits">
 						<p>Credits</p>
 					</Link>
+					<p> </p>
 				</div>
 			</div>
 		</>
