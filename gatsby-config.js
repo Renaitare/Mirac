@@ -3,7 +3,7 @@ require('dotenv').config();
 module.exports = {
 	siteMetadata: {
 		title: `mirac`,
-		description: `Home of Mirac's Dope Wallpapers`,
+		description: `Wallpapers by Mirac`,
 		author: `Mirac & Renaitare`,
 		siteUrl: `https://thatmirac.com`,
 	},

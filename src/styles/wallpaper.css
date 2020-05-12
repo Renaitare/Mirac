@@ -89,7 +89,7 @@ header {
 	width: 100%;
 	object-fit: cover;
 	position: absolute;
-	top: -256px;
+	margin: -85% 0;
 	z-index: 1;
 }
 
@@ -158,6 +158,7 @@ header {
 }
 
 .screenshots-wrapper {
+	height: 482px;
 	padding-bottom: 48px;
 	overflow-x: scroll;
 	overflow-y: hidden;
@@ -174,6 +175,7 @@ header {
 	width: 192px;
 	margin-left: 24px;
 	border-radius: 20px;
+	border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .screenshots-wrapper p {
@@ -345,6 +347,7 @@ header {
 	margin-right: 8px;
 	width: 128px;
 	border-radius: 8px;
+	border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .related-wrapper p {
@@ -354,20 +357,23 @@ header {
 }
 
 .footer {
+	display: flex;
 	margin-top: 1em;
 	margin-bottom: 25em;
-}
-
-.footer p {
-	color: rgba(255, 255, 255, 0.5);
-	font-family: 'SF Text';
-	font-size: 10pt;
 }
 
 .footer a,
 .footer a:visited {
 	color: rgba(255, 255, 255, 0.5);
 	text-decoration: underline;
+	margin-right: 0;
+	margin-left: auto;
+}
+
+.footer p {
+	color: rgba(255, 255, 255, 0.5);
+	font-family: 'SF Text';
+	font-size: 10pt;
 }
 
 #link {
@@ -395,6 +401,10 @@ header {
 		grid-template-columns: repeat(3, 1fr);
 	}
 
+	.top-image-background img {
+		margin: -70% 0;
+	}
+
 	.screenshots-wrapper::-webkit-scrollbar {
 		display: none;
 	}
@@ -407,6 +417,10 @@ header {
 	}
 
 	.footer {
-		margin-left: 24px;
+		margin-left: 0.5em;
+	}
+
+	.footer a {
+		margin-right: 0.5em;
 	}
 }

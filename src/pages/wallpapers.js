@@ -28,13 +28,16 @@ const IndexPage = () => (
 		</div>
 		<div class="wallprev-container">
 			<div class="wallprev">
-				<Wallpapers></Wallpapers>
+				<Wallpapers />
 			</div>
 			<div class="footer">
 				<p>
 					© {new Date().getFullYear()}{' '}
 					<a href="https://twitter.com/thatmirac">Mirac</a>
 				</p>
+				<Link to="credits">
+					<p>Credits</p>
+				</Link>
 			</div>
 		</div>
 	</>
@@ -73,6 +76,7 @@ export const Wallpapers = () => {
 	return wallpaperList.map(({ node }) => (
 		<Link to={'wallpapers/' + node.uid}>
 			<img
+				id="wallpaper"
 				style={{
 					width: '100%',
 					height: 'auto',
