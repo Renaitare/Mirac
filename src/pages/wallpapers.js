@@ -73,7 +73,7 @@ export const Wallpapers = () => {
 	return wallpaperList.map(({ node }) => (
 		<Link to={'wallpapers/' + node.uid}>
 			<img
-				className="fade"
+				className="preload-fade"
 				style={{
 					width: '100%',
 					height: 'auto',

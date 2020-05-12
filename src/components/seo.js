@@ -87,8 +87,12 @@ function SEO({ description, meta, title, image }) {
 					name: 'apple-mobile-web-app-status-bar-style',
 					content: 'black-translucent',
 				},
-			].concat(meta)}
-		/>
+			].concat(meta)}>
+			<link
+				rel="canonical"
+				href={`https://thatmirac.com/wallpapers/${title}`}
+			/>
+		</Helmet>
 	);
 }
 
