@@ -423,7 +423,8 @@ header {
 		margin-left: 0.5em;
 	}
 
+	.footer p,
 	.footer a {
-		margin-right: 0.5em;
+		margin-right: 0.25em;
 	}
 }
