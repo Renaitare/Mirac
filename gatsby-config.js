@@ -8,6 +8,7 @@ module.exports = {
 		siteUrl: `https://thatmirac.com`,
 	},
 	plugins: [
+		`gatsby-plugin-preact`,
 		`gatsby-plugin-react-helmet`,
 		{
 			resolve: `gatsby-source-filesystem`,
