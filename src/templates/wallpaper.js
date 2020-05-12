@@ -20,66 +20,10 @@ const Wallpaper = ({ pageContext }) => {
 		relatedPreviews,
 	} = pageContext;
 
-	let downloadHTML;
 	let mobileHTML;
 	let tabletHTML;
 	let desktopHTML;
 	let relatedHTML;
-
-	if (mobile) {
-		downloadHTML = (
-			<div class="get-button-container">
-				<div class="get-button">
-					<a
-						href={mobileImage.substring(
-							0,
-							mobileImage.indexOf('?auto=compress')
-						)}
-						id="link">
-						GET
-					</a>
-				</div>
-			</div>
-		);
-	} else if (desktop) {
-		downloadHTML = (
-			<div class="get-button-container">
-				<div class="get-button">
-					<a
-						href={desktopImage.substring(
-							0,
-							desktopImage.indexOf('?auto=compress')
-						)}
-						id="link">
-						GET
-					</a>
-				</div>
-			</div>
-		);
-	} else if (tablet) {
-		downloadHTML = (
-			<div class="get-button-container">
-				<div class="get-button">
-					<a
-						href={tabletImage.substring(
-							0,
-							tabletImage.indexOf('?auto=compress')
-						)}
-						id="link">
-						GET
-					</a>
-				</div>
-			</div>
-		);
-	} else {
-		downloadHTML = (
-			<div class="get-button-container">
-				<div class="get-button" id="bad-link">
-					GET
-				</div>
-			</div>
-		);
-	}
 
 	if (mobile) {
 		mobileHTML = (
@@ -207,7 +151,6 @@ const Wallpaper = ({ pageContext }) => {
 							<h4>{date}</h4>
 							<h1>{name}</h1>
 						</div>
-						{downloadHTML}
 					</div>
 				</div>
 				<div class="screenshots-section">
@@ -246,6 +189,9 @@ const Wallpaper = ({ pageContext }) => {
 						© {new Date().getFullYear()}{' '}
 						<a href="https://twitter.com/thatmirac">Mirac</a>
 					</p>
+					<Link to="credits">
+						<p>Credits</p>
+					</Link>
 				</div>
 			</div>
 		</>

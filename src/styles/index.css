@@ -53,20 +53,23 @@
 }
 
 .footer {
+	display: flex;
 	margin-top: 1em;
 	margin-bottom: 25em;
-}
-
-.footer p {
-	color: rgba(255, 255, 255, 0.5);
-	font-family: 'SF Text';
-	font-size: 10pt;
 }
 
 .footer a,
 .footer a:visited {
 	color: rgba(255, 255, 255, 0.5);
 	text-decoration: underline;
+	margin-right: 0;
+	margin-left: auto;
+}
+
+.footer p {
+	color: rgba(255, 255, 255, 0.5);
+	font-family: 'SF Text';
+	font-size: 10pt;
 }
 
 @media only screen and (max-width: 1024px) {
@@ -88,5 +91,9 @@
 
 	.footer {
 		margin-left: 0.5em;
+	}
+
+	.footer a {
+		margin-right: 0.5em;
 	}
 }
