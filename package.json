@@ -6,7 +6,7 @@
   "author": "Renaitare <git@renai.me>",
   "dependencies": {
     "dotenv": "^8.2.0",
-    "gatsby": "^2.20.35",
+    "gatsby": "^2.21.24",
     "gatsby-plugin-manifest": "^2.3.7",
     "gatsby-plugin-react-helmet": "^3.2.5",
     "gatsby-plugin-robots-txt": "^1.5.0",
@@ -19,6 +19,7 @@
     "react-helmet": "^6.0.0"
   },
   "devDependencies": {
+    "gatsby-cli": "^2.12.17",
     "prettier": "2.0.4"
   },
   "keywords": [
