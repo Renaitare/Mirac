@@ -421,11 +421,12 @@ header {
 
 	.footer {
 		margin-left: 0.5em;
-		margin-bottom: 416px;
+		/* margin-bottom: 416px; */
 	}
 
 	.footer p,
 	.footer a {
 		margin-right: 0.25em;
+		margin-bottom: 416px;
 	}
 }

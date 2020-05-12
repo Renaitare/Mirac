@@ -133,12 +133,13 @@ header {
 		margin-right: 0;
 	}
 
-	.footer {
+	/* .footer {
 		margin-bottom: 416px;
-	}
+	} */
 
 	.footer p,
 	.footer a {
 		margin-right: 0.25em;
+		margin-bottom: 416px;
 	}
 }
