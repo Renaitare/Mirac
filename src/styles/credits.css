@@ -136,4 +136,8 @@ header {
 	.footer {
 		margin-left: 0.5em;
 	}
+
+	.footer p {
+		margin-bottom: 20px;
+	}
 }
