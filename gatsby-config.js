@@ -40,6 +40,19 @@ module.exports = {
 				return `/wallpaper/${wallpaper.uid}`;
 			},
 		},
+		{
+			resolve: 'gatsby-plugin-prismic-preview',
+			options: {
+				repositoryName: process.env.PRISMIC_NAME,
+				linkResolver(doc) {
+					if (doc.type === 'Wallpaper') {
+						return `/wallpapers/${doc.uid}`;
+					}
+					return `${doc.type}`;
+				},
+				path: '/preview',
+			},
+		},
 		`gatsby-plugin-sitemap`,
 		`gatsby-plugin-robots-txt`,
 		{

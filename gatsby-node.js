@@ -18,12 +18,6 @@ exports.createPages = async ({ reporter, actions, graphql }) => {
 									text
 								}
 							}
-							acknowledgement
-							credit_author
-							credit_author_link
-							credit_author_image {
-								url
-							}
 							desktop_image {
 								url
 							}
@@ -70,6 +64,18 @@ exports.createPages = async ({ reporter, actions, graphql }) => {
 								}
 							}
 							publish_date(formatString: "DD.MM.YYYY")
+							credit_author {
+								text
+							}
+							credit_author_image {
+								url
+							}
+							credit_author_link {
+								text
+							}
+							acknowledgement {
+								text
+							}
 						}
 					}
 				}
@@ -89,9 +95,9 @@ exports.createPages = async ({ reporter, actions, graphql }) => {
 				date: node.data.publish_date,
 				name: node.data.name.raw[0].text,
 				credits: {
-					acknowledgement: node.data.acknowledgement,
-					author: node.data.credit_author,
-					link: node.data.credit_author_link,
+					acknowledgement: node.data.acknowledgement.text,
+					author: node.data.credit_author.text,
+					link: node.data.credit_author_link.text,
 					image: node.data.credit_author_image.url,
 				},
 				desktop: node.data.desktop_resolution,

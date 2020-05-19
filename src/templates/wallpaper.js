@@ -23,14 +23,14 @@ const Wallpaper = ({ pageContext }) => {
 		relatedPreviews,
 	} = pageContext;
 
-	let creditsHTML;
+	let acknowledgeHTML;
 	let mobileHTML;
 	let tabletHTML;
 	let desktopHTML;
 	let relatedHTML;
 
 	if (credits.author) {
-		let creditsHTML = (
+		acknowledgeHTML = (
 			<div class="credits-section">
 				<p>{credits.acknowledgement}</p>
 				<div class="user">
@@ -40,7 +40,7 @@ const Wallpaper = ({ pageContext }) => {
 			</div>
 		);
 	} else {
-		creditsHTML = <></>;
+		acknowledgeHTML = <></>;
 	}
 
 	if (mobile) {
@@ -173,7 +173,7 @@ const Wallpaper = ({ pageContext }) => {
 						</div>
 					</div>
 				</div>
-				{creditsHTML}
+				{acknowledgeHTML}
 				<div class="screenshots-section">
 					<div class="screenshots-title">
 						<h1>Preview</h1>
