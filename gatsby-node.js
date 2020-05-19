@@ -18,6 +18,12 @@ exports.createPages = async ({ reporter, actions, graphql }) => {
 									text
 								}
 							}
+							acknowledgement
+							credit_author
+							credit_author_link
+							credit_author_image {
+								url
+							}
 							desktop_image {
 								url
 							}
@@ -82,6 +88,12 @@ exports.createPages = async ({ reporter, actions, graphql }) => {
 			context: {
 				date: node.data.publish_date,
 				name: node.data.name.raw[0].text,
+				credits: {
+					acknowledgement: node.data.acknowledgement,
+					author: node.data.credit_author,
+					link: node.data.credit_author_link,
+					image: node.data.credit_author_image.url,
+				},
 				desktop: node.data.desktop_resolution,
 				desktopImage: node.data.desktop_image.url,
 				mobile: node.data.mobile_resolution,

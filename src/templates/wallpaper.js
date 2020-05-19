@@ -12,6 +12,7 @@ const Wallpaper = ({ pageContext }) => {
 	const {
 		date,
 		name,
+		credits,
 		desktop,
 		desktopImage,
 		mobile,
@@ -22,10 +23,25 @@ const Wallpaper = ({ pageContext }) => {
 		relatedPreviews,
 	} = pageContext;
 
+	let creditsHTML;
 	let mobileHTML;
 	let tabletHTML;
 	let desktopHTML;
 	let relatedHTML;
+
+	if (credits.author) {
+		let creditsHTML = (
+			<div class="credits-section">
+				<p>{credits.acknowledgement}</p>
+				<div class="user">
+					<img src={credits.image} alt={credits.author + ' Image'} />
+					<a href={credits.link}>{credits.author}</a>
+				</div>
+			</div>
+		);
+	} else {
+		creditsHTML = <></>;
+	}
 
 	if (mobile) {
 		mobileHTML = (
@@ -157,6 +173,7 @@ const Wallpaper = ({ pageContext }) => {
 						</div>
 					</div>
 				</div>
+				{creditsHTML}
 				<div class="screenshots-section">
 					<div class="screenshots-title">
 						<h1>Preview</h1>
