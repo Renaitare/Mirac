@@ -174,6 +174,7 @@ const Wallpaper = ({ pageContext }) => {
 					</div>
 				</div>
 				{acknowledgeHTML}
+				<div class="seperator"></div>
 				<div class="screenshots-section">
 					<div class="screenshots-title">
 						<h1>Preview</h1>
